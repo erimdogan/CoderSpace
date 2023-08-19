@@ -20,4 +20,11 @@ public class Airports {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String City) {
+        this.city = City;
+    }
 }

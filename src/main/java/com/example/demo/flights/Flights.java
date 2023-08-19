@@ -13,8 +13,8 @@ public class Flights{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String DepartureAirport;
-    private String ArrivalAirPort;
+    private String departureAirport;
+    private String arrivalAirPort;
     private LocalDateTime arrivalDateTime;
     private LocalDateTime departureDateTime;
     double price;
@@ -27,17 +27,17 @@ public class Flights{
     }
 
     public String getDepartureAirport() {
-        return DepartureAirport;
+        return departureAirport;
     }
     public void setDepartureAirport(String DepartureAirport) {
-        this.DepartureAirport = DepartureAirport;
+        this.departureAirport = DepartureAirport;
     }
 
     public String getArrivalAirPort() {
-        return ArrivalAirPort;
+        return arrivalAirPort;
     }
     public void setArrivalAirPort(String ArrivalAirPort) {
-        this.ArrivalAirPort = ArrivalAirPort;
+        this.arrivalAirPort = ArrivalAirPort;
     }
 
     public LocalDateTime getArrivalDateTime() {
