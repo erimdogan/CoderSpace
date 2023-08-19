@@ -15,7 +15,7 @@ public class Flights{
     private Long id;
     private String departureAirport;
     private String arrivalAirPort;
-    private LocalDateTime arrivalDateTime;
+    private LocalDateTime returnDateTime;
     private LocalDateTime departureDateTime;
     double price;
 
@@ -40,11 +40,11 @@ public class Flights{
         this.arrivalAirPort = ArrivalAirPort;
     }
 
-    public LocalDateTime getArrivalDateTime() {
-        return arrivalDateTime;
+    public LocalDateTime getReturnDateTime() {
+        return returnDateTime;
     }
-    public void setArrivalDateTime(LocalDateTime arrivalDateTime) {
-        this.arrivalDateTime = arrivalDateTime;
+    public void setReturnDateTime(LocalDateTime returnDateTime) {
+        this.returnDateTime = returnDateTime;
     }
 
     public LocalDateTime getDepartureDateTime() {
