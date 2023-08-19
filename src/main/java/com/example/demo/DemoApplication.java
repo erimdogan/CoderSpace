@@ -19,7 +19,6 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-
     @Bean
     public CommandLineRunner loadData(FlightRepository flightRepository, AirportRepository airportRepository) {
         return args -> {
