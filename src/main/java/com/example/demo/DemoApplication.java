@@ -9,10 +9,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
 @SpringBootApplication
+@RestController
 @EnableScheduling
 public class DemoApplication {
 
@@ -34,6 +36,8 @@ public class DemoApplication {
             flight2.setDepartureAirport("LAX");
             flight2.setArrivalAirPort("JFK");
             flight2.setDepartureDateTime(LocalDateTime.parse("2023-08-19T15:00:00"));
+            flight2.setReturnDateTime(LocalDateTime.parse("2023-08-19T16:00:00"));
+            flight2.setPrice(200.00);
             flightRepository.save(flight2);
 
 
