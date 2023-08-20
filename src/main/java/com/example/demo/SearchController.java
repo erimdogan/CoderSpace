@@ -19,11 +19,19 @@ public class SearchController {
     private FlightRepository flightRepository;
 
     @GetMapping("/flights")
-    public List<Flights> searchFlights(
-            @RequestParam String departureAirport,
-            @RequestParam String arrivalAirport,
-            @RequestParam("departureDateTime") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime departureDateTime,
-            @RequestParam(value="returnDate",required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime returnDateTime) {
+    public List<Flights> getFlights(
+            @RequestParam(required = false, name = "departureAirport") String departureAirport,
+            @RequestParam(required = false, name = "arrivalAirport") String arrivalAirport,
+            @RequestParam(required = false, name = "departureDateTime") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime departureDateTime,
+            @RequestParam(value = "returnDateTime", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime returnDateTime) {
+
+
+        System.out.println("departureAirport: " + departureAirport);
+        System.out.println("arrivalAirport: " + arrivalAirport);
+        System.out.println("departureDateTime: " + departureDateTime);
+        System.out.println("returnDateTime: " + returnDateTime);
+
+        //http://localhost:8080/search/flights?departureAirport=SEA&arrivalAirport=SFO&departureDateTime=2020-01-01T00:00:00&returnDateTime=2020-01-01T01:00:00
 
         if (returnDateTime != null) {
             // Round-trip flights
